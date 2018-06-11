@@ -4,14 +4,38 @@ package com.example.android.pets;
  * Created by diegolopez on 1/4/18.
  */
 
-public class Deletme {
+public class Deletme extends Deletme2{
 
-    public void helloworld(){
+    public static final Integer id =55;
+
+    public Deletme() {
+
+    }
+
+    @Override
+    public Integer getDni() {
+        return super.getDni();
+    }
+
+    void helloworld(){
+        getDni();
         System.out.print(true);
     }
 
     public static void main(String[]args){
+        Integer dd =new Deletme2().getDni();
+        System.out.println(dd);
+        //test1();
+        Deletme2.dni = 46844382;
 
+        Deletme2 ff = new Deletme2();
+        System.out.println(ff.getDni());
+
+
+
+    }
+
+    private static void test1() {
         String test1= "diego lopez";
         String test2="diegolopez";
         String test3="diego lopez";
@@ -48,7 +72,5 @@ public class Deletme {
 
         System.out.println(x == y);
         System.out.println(x.equals(y));
-
-
     }
 }
